@@ -6,10 +6,10 @@ const jwt = require('jsonwebtoken');
 const app = express();
 const PORT = 3000;
 const mongoUri = process.env.MONGO_URI;
+const origin = process.env.ORIGIN;
 const mongoose = require('mongoose');
 const corsOptions = {
-    // origin : "http://localhost:5173",     
-    origin : "https://lettura-one.vercel.app",     
+    origin,     
     credentials:true,
     optionsSuccessStatus:200        
 }
